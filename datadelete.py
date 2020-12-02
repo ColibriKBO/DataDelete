@@ -2,12 +2,12 @@ import os
 import shutil
 import time
 
-path = "C:/Users/Mike/Documents/Temp/"
+path = "C:/Users/Mike/Documents/Temp/" # Data directory to remove data from
 
-now = time.time()
-maxdays = 86400*1 # max age of directories to keep
+now = time.time() # Current time in seconds
+maxdays = 86400*1 # Max age (in seconds) of directories to keep
 
-minsize = 10 # Min available space in TB before deleting files
+minsize = 10 # Min available space (in TB) before deleting files
 
 total, used, free = shutil.disk_usage(path)
 print("Total: %.3f TB" % (total // (2**30) / 1000))
