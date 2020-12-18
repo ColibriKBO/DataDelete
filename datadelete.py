@@ -8,7 +8,8 @@ from astropy.time import Time
 from astropy.coordinates import EarthLocation
 
 
-path = "C:/Users/Mike/Documents/Temp/" # Data directory to remove data from
+# path = "C:/Users/Mike/Documents/Temp/" # Data directory to remove data from
+path = "D:/ColibriData/"
 
 latitude = 43.19301
 longitude = -81.31555
@@ -48,7 +49,7 @@ if (free // (2**30) / 1000) < minsize:
 	print("We need to clean up!")
 	for root, directories, files in os.walk(path):
 		for dir in directories:
-			
+
 			timestamp = os.path.getmtime(os.path.join(root, dir))
 
 			if (now - maxdays) > timestamp:
